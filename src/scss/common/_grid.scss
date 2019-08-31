@@ -1,0 +1,33 @@
+@import "variables";
+
+.container {
+  display: grid;
+  width: 960px;
+  margin: 0 auto;
+  padding: 32px;
+
+  &-no-padding {
+    padding: 0;
+  }
+
+  &-fluid {
+    display: grid;
+    width: 100%;
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    width: 100%;
+  }
+  @media (min-width: $breakpoint-sm) {
+    width: 540px;
+  }
+  @media (min-width: $breakpoint-md) {
+    width: 720px;
+  }
+  @media (min-width: $breakpoint-lg) {
+    width: 960px;
+  }
+  @media (min-width: $breakpoint-xl) {
+    width: 1140px;
+  }
+}

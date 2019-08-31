@@ -1,0 +1,26 @@
+
+button {
+  font-weight: normal;
+  color: #FFFFFF;
+  height: 50px;
+  font-size: pxToRem(16);
+  border: none;
+  width: auto;
+}
+
+.green {
+  background: $green_theme;
+}
+
+.yellow {
+  background: $yellow;
+}
+
+.transparent, a.transparent {
+  background: transparent;
+  color: $white;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
+}
+

@@ -1,0 +1,48 @@
+$values: (5, 10, 15, 20);
+
+@each $value in $values {
+  .m {
+    &-#{$value} {
+      margin: #{$value}px;
+    }
+
+    &-t-#{$value} {
+      margin-top: #{$value}px;
+    }
+
+    &-r-#{$value} {
+      margin-right: #{$value}px;
+    }
+
+    &-b-#{$value} {
+      margin-bottom: #{$value}px;
+    }
+
+    &-l-#{$value} {
+      margin-left: #{$value}px;
+    }
+  }
+
+  .p {
+    &-#{$value} {
+      padding: #{$value}px;
+    }
+
+    &-t-#{$value} {
+      padding-top: #{$value}px;
+    }
+
+    &-r-#{$value} {
+      padding-right: #{$value}px;
+    }
+
+    &-b-#{$value} {
+      padding-bottom: #{$value}px;
+    }
+
+    &-l-#{$value} {
+      padding-left: #{$value}px;
+    }
+  }
+
+}

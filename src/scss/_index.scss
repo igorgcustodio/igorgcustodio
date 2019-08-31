@@ -1,0 +1,74 @@
+@import "common/variables";
+@import "common/colors";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+
+  &-title {
+    text-align: center;
+    color: $green_theme;
+  }
+}
+
+.about, .interests-card {
+  background: #E5E5E5;
+  margin-top: 32px;
+
+  & > p {
+    line-height: 20px;
+  }
+
+  .green {
+    margin: 0 auto;
+    width: 150px;
+  }
+
+  @include mobile {
+    margin-top: 0;
+  }
+}
+
+.background {
+
+  &-cards {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: space-between;
+  }
+
+  &-item {
+    background: $green_theme;
+
+    padding: 32px;
+    margin: 8px 0;
+    flex-basis: 0;
+    flex-grow: 1;
+
+    @include mobile {
+      margin: 0;
+    }
+
+    &-title, &-local, &-date, &-description {
+      color: white;
+    }
+
+    &-title {
+      margin-bottom: 8px;
+    }
+
+    &-local, &-date {
+      margin: 0;
+    }
+  }
+}
+
+.interests {
+  margin-bottom: 32px;
+}
+
+.interests-card {
+  margin-top: 0;
+}

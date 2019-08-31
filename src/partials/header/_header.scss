@@ -1,0 +1,39 @@
+@import "../../scss/common/colors";
+@import "../../scss/common/variables";
+
+header {
+  z-index: $z-index-header;
+  background: {
+    image: url("/public/images/header.jpg");
+    repeat: no-repeat;
+    size: 100% auto;
+    position: center top;
+  };
+
+  .container {
+    background: $green_theme;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+
+    .title, .description {
+      color: $white;
+    }
+
+    .contact {
+      margin: 32px 0 0;
+
+      &-item {
+        color: $white;
+        padding: 8px 0 0;
+      }
+    }
+  }
+
+  @include mobile {
+    .container {
+      margin-top: 50px;
+    }
+  }
+
+}

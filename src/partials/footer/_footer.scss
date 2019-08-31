@@ -1,0 +1,12 @@
+@import "../../scss/common/colors";
+
+.footer {
+  background: $green_theme;
+  display: flex;
+  justify-content: space-between;
+  padding: 32px;
+
+  a, span {
+    color: white;
+  }
+}
