@@ -7,15 +7,11 @@
 
   .scroll {
     width: 100%;
-    max-width: calc(100% - 317px);
+    max-width: calc(100% - 381px);
     margin-left: 317px;
 
     .card {
       margin-bottom: 32px;
-
-      &:first-child {
-        height: 370px;
-      }
     }
   }
 
