@@ -6,7 +6,7 @@
   position: relative;
 
   .scroll {
-    width: 100%;
+    width: calc(100% - 64px);
     max-width: calc(100% - 381px);
     margin-left: 317px;
 
