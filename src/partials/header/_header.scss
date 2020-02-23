@@ -80,4 +80,14 @@
       display: none;
     }
   }
+
+  @include mobile {
+    .card {
+      padding: 32px 16px;
+    }
+
+    &-img {
+      margin-right: 16px;
+    }
+  }
 }
