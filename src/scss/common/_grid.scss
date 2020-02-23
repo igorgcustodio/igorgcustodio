@@ -5,12 +5,15 @@
   width: 960px;
   margin: 0 auto;
   padding: 32px;
+  box-sizing: border-box;
 
   &-no-padding {
     padding: 0;
+    box-sizing: border-box;
   }
 
   &-fluid {
+    box-sizing: border-box;
     display: grid;
     width: 100%;
     max-width: 1107px;

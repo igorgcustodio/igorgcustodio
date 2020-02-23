@@ -6,9 +6,10 @@
   position: relative;
 
   .scroll {
-    width: calc(100% - 64px);
+    width: 100%;
     max-width: calc(100% - 381px);
     margin-left: 317px;
+    position: relative;
 
     .card {
       margin-bottom: 32px;
