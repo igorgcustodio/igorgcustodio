@@ -1,10 +1,13 @@
 @import "../../scss/common/colors";
 
 .footer {
-  background: $green_theme;
+  background: $theme;
   display: flex;
   justify-content: space-between;
   padding: 32px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 
   a, span {
     color: white;

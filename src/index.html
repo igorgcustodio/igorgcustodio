@@ -8,68 +8,23 @@
     <meta property="og:locale" content="${__('PAGE_LOCALE')}"/>
     <meta property="og:title" content="Igor G. Custodio"/>
     <meta property="og:url" content="${__('PAGE_URL')}"/>
-    <meta property="og:site_name" content="Duopana"/>
+    <meta property="og:site_name" content="Igor G. Custodio"/>
     <meta property="og:description" content="${__('PAGE_DESCRIPTION')}"/>
     <meta name="description" content="${__('PAGE_DESCRIPTION')}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css">
 </head>
 <body>
-${require('./partials/header/_header.html')}
-<section class="container card about">
-    ${__('ABOUT')}
-    <!--<button class="green">download cv</button>-->
-</section>
-<section class="container container-no-padding card background">
-    <h2 class="card-title">${__('EDUCATION')}</h2>
-    <div class="background-cards">
-        <div class="background-item">
-            <h3 class="background-item-title">${__('EDUCATION_1_TITLE')}</h3>
-            <p class="background-item-local">${__('EDUCATION_1_LOCATION')}</p>
-            <p class="background-item-date">${__('EDUCATION_1_DURATION')}</p>
-            <p class="background-item-description">${__('EDUCATION_1_DESCRIPTION')}</p>
-        </div>
-        <div class="background-item">
-            <h3 class="background-item-title">${__('EDUCATION_2_TITLE')}</h3>
-            <p class="background-item-local">${__('EDUCATION_2_LOCATION')}</p>
-            <p class="background-item-date">${__('EDUCATION_2_DURATION')}</p>
-            <p class="background-item-description">${__('EDUCATION_2_DESCRIPTION')}</p>
-        </div>
-        <div class="background-item">
-            <h3 class="background-item-title">${__('EDUCATION_3_TITLE')}</h3>
-            <p class="background-item-local">${__('EDUCATION_3_LOCATION')}</p>
-            <p class="background-item-date">${__('EDUCATION_3_DURATION')}</p>
-            <p class="background-item-description">${__('EDUCATION_3_DESCRIPTION')}</p>
-        </div>
+<div class="container-fluid app">
+    ${require('./partials/header/_header.html')}
+    <div class="scroll">
+        ${require('./partials/main/main.html')}
+        ${require('./partials/about/about.html')}
+        ${require('./partials/education/education.html')}
+        ${require('./partials/career/career.html')}
+        ${require('./partials/achievements/achievements.html')}
+        ${require('./partials/interests/interests.html')}
     </div>
-</section>
-<section class="container container-no-padding card background">
-    <h2 class="card-title">${__('EXPERIENCE')}</h2>
-    <div class="background-cards">
-        <div class="background-item">
-            <h3 class="background-item-title">${__('EXPERIENCE_1_TITLE')}</h3>
-            <p class="background-item-local">${__('EXPERIENCE_1_LOCATION')}</p>
-            <p class="background-item-date">${__('EXPERIENCE_1_DURATION')}</p>
-            <p class="background-item-description">${__('EXPERIENCE_1_DESCRIPTION')}</p>
-        </div>
-        <div class="background-item">
-            <h3 class="background-item-title">${__('EXPERIENCE_2_TITLE')}</h3>
-            <p class="background-item-local">${__('EXPERIENCE_2_LOCATION')}</p>
-            <p class="background-item-date">${__('EXPERIENCE_2_DURATION')}</p>
-            <p class="background-item-description">${__('EXPERIENCE_2_DESCRIPTION')}</p>
-        </div>
-        <div class="background-item">
-            <h3 class="background-item-title">${__('EXPERIENCE_3_TITLE')}</h3>
-            <p class="background-item-local">${__('EXPERIENCE_3_LOCATION')}</p>
-            <p class="background-item-date">${__('EXPERIENCE_3_DURATION')}</p>
-            <p class="background-item-description">${__('EXPERIENCE_3_DESCRIPTION')}</p>
-        </div>
-    </div>
-</section>
-<section class="container container-no-padding card interests">
-    <h2 class="card-title">${__('INTERESTS')}</h2>
-    <div class="container interests-card">
-        ${__('INTERESTS_DESCRIPTION')}
-    </div>
-</section>
+</div>
 ${require('./partials/footer/_footer.html')}
 </body>
 </html>

@@ -1,0 +1,96 @@
+@mixin timeline($ball-color, $time-color, $height: 200) {
+  position: relative;
+  margin: 0 0 0 24px;
+  min-height: #{$height}px;
+
+  &:before {
+    content: ' ';
+    width: 2px;
+    top: 0;
+    bottom: 0;
+    height: #{$height}px;
+    background: $green;
+    display: block;
+    float: left;
+  }
+
+  &:after {
+    content: ' ';
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background: $ball-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    float: left;
+    margin-left: -9px;
+    margin-top: 80px;
+  }
+
+  &:first-child {
+    &:before {
+      height: #{$height/2}px;
+      margin-top: 100px;
+    }
+  }
+
+  &:last-child {
+    &:before {
+      height: #{$height/2}px;
+    }
+  }
+
+  .content {
+    padding-left: 40px;
+  }
+
+  &-title {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  &-local {
+    margin-top: 8px;
+    margin-bottom: 0;
+
+    a {
+      color: $regular-gray;
+      transition: .2s;
+
+      &:hover {
+        color: $theme;
+      }
+    }
+  }
+
+  &-time {
+    color: $time-color;
+    font-size: 0.875rem;
+    margin-top: 0;
+  }
+
+  &-description {
+    line-height: #{1rem * 1.5};
+    margin: 0;
+  }
+
+  @include mobile {
+    max-height: unset;
+    padding: 0;
+    margin: 0;
+
+    &:before, &:after {
+      display: none;
+    }
+
+    .content {
+      padding: 0;
+      margin: 0;
+    }
+
+    &-title {
+      margin-top: 24px;
+    }
+  }
+}

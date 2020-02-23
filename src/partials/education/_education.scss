@@ -1,0 +1,9 @@
+@import "src/scss/common/timeline";
+
+.education {
+  .items {
+    .item {
+      @include timeline($white, $medium-gray);
+    }
+  }
+}

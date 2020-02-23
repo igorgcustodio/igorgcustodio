@@ -32,8 +32,14 @@ $z-index-overlay: 20;
   }
 }
 
-@mixin mw($width) {
+@mixin min-w($width) {
   @media (min-width: #{$width}) {
+    @content
+  }
+}
+
+@mixin max-w($width) {
+  @media (max-width: #{$width}) {
     @content
   }
 }

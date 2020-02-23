@@ -7,10 +7,11 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "dev": "cross-env NODE_ENV=dev webpack-dev-server --open-page 'pt' --config webpack.config.js",
+    "dev:no-page": "cross-env NODE_ENV=dev webpack-dev-server --config webpack.config.js",
     "dev:en": "cross-env NODE_ENV=dev webpack-dev-server --open-page 'en' --config webpack.config.js",
     "lint": "eslint src",
     "lint:fix": "npm run lint -- --fix",
-    "start": "npm run dev"
+    "start": "npm run dev:no-page"
   },
   "author": "Igor G. Custodio",
   "license": "ISC",

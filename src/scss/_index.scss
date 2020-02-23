@@ -1,74 +1,35 @@
 @import "common/variables";
 @import "common/colors";
 
-.card {
+.app {
   display: flex;
-  flex-direction: column;
-  justify-items: center;
+  position: relative;
 
-  &-title {
-    text-align: center;
-    color: $green_theme;
-  }
-}
+  .scroll {
+    width: 100%;
+    max-width: calc(100% - 317px);
+    margin-left: 317px;
 
-.about, .interests-card {
-  background: #E5E5E5;
-  margin-top: 32px;
+    .card {
+      margin-bottom: 32px;
 
-  & > p {
-    line-height: 20px;
-  }
-
-  .green {
-    margin: 0 auto;
-    width: 150px;
-  }
-
-  @include mobile {
-    margin-top: 0;
-  }
-}
-
-.background {
-
-  &-cards {
-    display: flex;
-    flex-direction: row;
-    flex-flow: wrap;
-    justify-content: space-between;
-  }
-
-  &-item {
-    background: $green_theme;
-
-    padding: 32px;
-    margin: 8px 0;
-    flex-basis: 0;
-    flex-grow: 1;
-
-    @include mobile {
-      margin: 0;
+      &:first-child {
+        height: 370px;
+      }
     }
+  }
 
-    &-title, &-local, &-date, &-description {
-      color: white;
-    }
+  @include max-w($breakpoint-lg) {
+    flex-direction: column;
+    padding-top: 136px;
 
-    &-title {
-      margin-bottom: 8px;
-    }
-
-    &-local, &-date {
-      margin: 0;
+    .scroll {
+      position: relative;
+      max-width: unset;
+      padding: 0;
+      margin-left: 0;
     }
   }
 }
 
-.interests {
-  margin-bottom: 32px;
-}
 
-.interests-card {
-  margin-top: 0;
-}

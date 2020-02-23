@@ -1,2 +1,7 @@
-@import "colors";
+.subtitle {
+  text-decoration: underline $green;
+}
 
+.general-text {
+  color: $regular-gray;
+}

@@ -1,0 +1,43 @@
+.about {
+  &-photo {
+    width: 200px;
+    margin: 0 auto;
+
+    &-pic {
+      border-radius: 50%;
+      width: 200px;
+    }
+  }
+
+  &-texts {
+    &-info {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      @include mobile {
+        flex-direction: column;
+      }
+
+      &-item {
+        display: flex;
+        align-items: center;
+
+        .icon {
+          font-size: 1.25rem;
+          margin-right: 8px;
+        }
+
+        .email {
+          text-decoration: none;
+          color: $black;
+          transition: .3s;
+
+          &:hover {
+            color: $green;
+          }
+        }
+      }
+    }
+  }
+}

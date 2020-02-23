@@ -1,0 +1,9 @@
+@import "src/scss/common/timeline";
+
+.achievements {
+  .items {
+    .item {
+      @include timeline($white, $medium-gray);
+    }
+  }
+}

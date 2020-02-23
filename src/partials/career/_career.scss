@@ -1,0 +1,9 @@
+@import "src/scss/common/timeline";
+
+.career {
+  .items {
+    .item {
+      @include timeline($theme, $regular-gray);
+    }
+  }
+}

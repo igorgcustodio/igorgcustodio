@@ -1,0 +1,20 @@
+@import "colors";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  padding: 32px;
+  border-radius: 32px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+  &-blue {
+    background: $theme;
+    color: $white;
+  }
+
+  &-white {
+    background: #fff;
+    color: $black;
+  }
+}

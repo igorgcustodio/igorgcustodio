@@ -1,0 +1,20 @@
+.main {
+  background: {
+    image: url("/public/images/background.jpg");
+    position: center center;
+  };
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 32px;
+
+  &-title {
+    margin-bottom: 0;
+  }
+
+  &-subtitle {
+   a {
+     color: $white;
+   }
+  }
+}

@@ -1,39 +1,83 @@
-@import "../../scss/common/colors";
 @import "../../scss/common/variables";
+@import "../../scss/common/colors";
+@import "../../scss/common/card";
 
-header {
-  z-index: $z-index-header;
-  background: {
-    image: url("/public/images/header.jpg");
-    repeat: no-repeat;
-    size: 100% auto;
-    position: center top;
-  };
+.navbar {
+  width: 285px;
+  height: 370px;
+  display: flex;
+  flex-direction: column;
+  min-width: 240px;
+  position: fixed;
 
-  .container {
-    background: $green_theme;
-    margin-top: 100px;
+  &-title {
+    color: #fff;
+    text-decoration: underline $green;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+  }
+
+  &-subtitle {
+    color: $gray;
+    font-size: 1rem;
+  }
+
+  &-social {
     display: flex;
-    flex-direction: column;
+    width: 100%;
+    margin-top: 48px;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: $white;
 
-    .title, .description {
+    .fab {
+      transition: .3s;
       color: $white;
-    }
 
-    .contact {
-      margin: 32px 0 0;
-
-      &-item {
-        color: $white;
-        padding: 8px 0 0;
+      &:hover {
+        color: $green;
       }
     }
   }
 
-  @include mobile {
-    .container {
-      margin-top: 50px;
-    }
+  &-img {
+    border-radius: 150px;
+    width: 150px;
+    margin: 0 auto;
   }
 
+  @include max-w($breakpoint-lg) {
+    z-index: $z-index-default;
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    margin-bottom: 16px;
+    left: 0;
+    top: 0;
+
+    .card {
+      border-radius: 0;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &-img {
+      width: 100px;
+      float: left;
+      margin: 0 40px 0 0;
+    }
+
+    &-info {
+
+    }
+
+    &-title, &-subtitle {
+      margin: 0;
+    }
+
+    &-social {
+      display: none;
+    }
+  }
 }
