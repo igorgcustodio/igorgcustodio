@@ -46,7 +46,7 @@ export default function Index() {
         <div className="inputs">
           <div className="input">
             <label htmlFor="age" className="label">Idade</label>
-            <input type="number"
+            <input type="text"
                    placeholder={"Idade"}
                    className="input-field"
                    id="age"
@@ -59,7 +59,7 @@ export default function Index() {
           </div>
           <div className="input">
             <label htmlFor="restHeartRate" className="label">Frequência em Repouso</label>
-            <input type="number"
+            <input type="text"
                    placeholder={"Frequência de repouso"}
                    className="input-field"
                    id="restHeartRate"
@@ -93,7 +93,7 @@ export default function Index() {
         <div className="inputs">
           <div className="input">
             <label htmlFor="waist" className="label">Cintura</label>
-            <input type="number"
+            <input type="text"
                    placeholder={"Cintura"}
                    className="input-field"
                    id="waist"
@@ -106,7 +106,7 @@ export default function Index() {
           </div>
           <div className="input">
             <label htmlFor="hip" className="label">Quadril</label>
-            <input type="number"
+            <input type="text"
                    placeholder={"Quadril"}
                    className="input-field"
                    id="hip"
