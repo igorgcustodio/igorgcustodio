@@ -46,11 +46,10 @@ export default function Index() {
         <div className="inputs">
           <div className="input">
             <label htmlFor="age" className="label">Idade</label>
-            <input type="text"
+            <input type="number"
                    placeholder={"Idade"}
                    className="input-field"
                    id="age"
-                   value={age}
                    onChange={({ target: { value } }) => {
                      if (!isNaN(parseInt(value))) {
                        setAge(parseInt(value));
@@ -59,11 +58,10 @@ export default function Index() {
           </div>
           <div className="input">
             <label htmlFor="restHeartRate" className="label">Frequência em Repouso</label>
-            <input type="text"
+            <input type="number"
                    placeholder={"Frequência de repouso"}
                    className="input-field"
                    id="restHeartRate"
-                   value={restHR}
                    onChange={({ target: { value } }) => {
                      if (!isNaN(parseInt(value))) {
                        setRestHR(parseInt(value));
@@ -93,11 +91,10 @@ export default function Index() {
         <div className="inputs">
           <div className="input">
             <label htmlFor="waist" className="label">Cintura</label>
-            <input type="text"
+            <input type="number"
                    placeholder={"Cintura"}
                    className="input-field"
                    id="waist"
-                   value={waistSize}
                    onChange={({ target: { value } }) => {
                      if (!isNaN(parseInt(value))) {
                        setWaistSize(parseInt(value));
@@ -106,11 +103,10 @@ export default function Index() {
           </div>
           <div className="input">
             <label htmlFor="hip" className="label">Quadril</label>
-            <input type="text"
+            <input type="number"
                    placeholder={"Quadril"}
                    className="input-field"
                    id="hip"
-                   value={hipSize}
                    onChange={({ target: { value } }) => {
                      if (!isNaN(parseInt(value))) {
                        setHipSize(parseInt(value));
@@ -128,7 +124,7 @@ export default function Index() {
           <h2 className="subtitle">Resultados</h2>
           <p className="text">Cintura: <strong>{waistSize}</strong> cm</p>
           <p className="text">Quadril: <strong>{hipSize}</strong> cm</p>
-          <p className="text">RCQ: <strong>{rcq}</strong> ou <strong>({rcq * 100}%)</strong></p>
+          <p className="text">RCQ: <strong>{rcq}</strong> ou <strong>({(rcq * 100).toFixed(0)}%)</strong></p>
         </div>
       </section>
     </Div>
