@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Div } from "./components/div.style";
+import { Div } from "../../components/div.style";
 
 export default function Index() {
   const [age, setAge] = useState(0);

@@ -5,7 +5,7 @@ import { headData } from '../mock/data';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../style/main.scss';
 
-export default () => {
+export default function Index() {
   const { title, lang, description } = headData;
 
   return (
