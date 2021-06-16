@@ -15,21 +15,23 @@ export default function Index() {
   
   function calculateMaximumFC() {
     const fc = 208 - (0.7 * age);
-    setMaxHR(parseInt(fc.toFixed(0)));
-    calculateFCT();
+    setMaxHR(fc);
+    calculateFCT(fc);
   }
   
-  function calculateFCT() {
+  function calculateFCT(maxHR) {
     if (restHR === 0) {
       alert("Inserir a frequência de repouso para calcular as FC de Treinamento");
       return;
     }
-    const fct50 = restHR + (0.5 * (maxHR - restHR));
-    setRestHR50(parseInt(fct50.toFixed(0)));
-    const fct60 = restHR + (0.6 * (maxHR - restHR));
-    setRestHR60(parseInt(fct60.toFixed(0)));
-    const fct70 = restHR + (0.7 * (maxHR - restHR));
-    setRestHR70(parseInt(fct70.toFixed(0)));
+    const factor = maxHR - restHR;
+    
+    const fct50 = restHR + (0.5 * factor);
+    setRestHR50(fct50);
+    const fct60 = restHR + (0.6 * factor);
+    setRestHR60(fct60);
+    const fct70 = restHR + (0.7 * factor);
+    setRestHR70(fct70);
   }
   
   function calculateRCQ() {
@@ -78,10 +80,10 @@ export default function Index() {
         <div className="results">
           <h2 className="subtitle">Resultados</h2>
           <p className="text">Idade: <strong>{age}</strong></p>
-          <p className="text">FC Máxima: <strong>{maxHR}</strong> bpm</p>
-          <p className="text">FC em 50%: <strong>{restHR50}</strong> bpm</p>
-          <p className="text">FC em 60%: <strong>{restHR60}</strong> bpm</p>
-          <p className="text">FC em 70%: <strong>{restHR70}</strong> bpm</p>
+          <p className="text">FC Máxima: <strong>{maxHR.toFixed(0)}</strong> bpm</p>
+          <p className="text">FC em 50%: <strong>{restHR50.toFixed(0)}</strong> bpm</p>
+          <p className="text">FC em 60%: <strong>{restHR60.toFixed(0)}</strong> bpm</p>
+          <p className="text">FC em 70%: <strong>{restHR70.toFixed(0)}</strong> bpm</p>
         </div>
       </section>
       <hr />
